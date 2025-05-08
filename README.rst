@@ -8,32 +8,32 @@ This is a Python-based power grid optimization framework for modeling energy sys
 
 You're encouraged to use this documentation to get inspiration, explore configurations, and understand the structure and operation of the GOOD model.
 
-📚 `src/ <https://github.com/goodmodel_doc/good-model/tree/main/src/>`_
+📚 `src/ <https://github.com/ucdavis/good_model/tree/main/src/>`_
     Core source code and optimization framework. This includes handling of network structures, assets, and policy implementations.
 
-📚 `Data/ <https://github.com/goodmodel_doc/good-model/tree/main/Data/>`_
+📚 `Data/ <https://github.com/ucdavis/good_model/tree/main/Data/>`_
     Contains input data files for the model, including network configurations and parameters.
 
-⚙️ `config.py <https://github.com/goodmodel_doc/good-model/blob/main/config.py>`_
+⚙️ `config.py <https://github.com/ucdavis/good_model/blob/main/config.py>`_
     Customize regions, time windows, input/output paths, and debugging settings.
 
-⚙️ `requirements.txt <https://github.com/goodmodel_doc/good-model/blob/main/requirements.txt>`_
+⚙️ `requirements.txt <https://github.com/ucdavis/good_model/blob/main/requirements.txt>`_
     Lists Python dependencies required to run the GOOD model.
 
-🔧 `run_network.py <https://github.com/goodmodel_doc/good-model/blob/main/run_network.py>`_
+🔧 `run_network.py <https://github.com/ucdavis/good_model/blob/main/run_network.py>`_
     Main executable script to run the grid optimization process.
 
-✅ `tests/ <https://github.com/goodmodel_doc/good-model/tree/main/tests/>`_
+✅ `tests/ <https://github.com/ucdavis/good_model/tree/main/tests/>`_
     Test suite for verifying feasibility, edge cases, and optimization logic. Uses `pytest` for structured testing.
 
 🔢 Versioning
     Project versioning follows standard Git tagging. Check releases and tags directly on GitHub.
 
-📜 `README.rst <https://github.com/goodmodel_doc/good-model/blob/main/README.rst>`_
+📜 `README.rst <https://github.com/ucdavis/good_model/blob/main/README.rst>`_
     This README provides a brief overview and links to key resources.
 
 ⁉️ Questions / Comments
-    For questions, suggestions, or comments, please open an issue on `GitHub Issues <https://github.com/goodmodel_doc/good-model/issues>`_.
+    For questions, suggestions, or comments, please open an issue on `GitHub Issues <https://github.com/ucdavis/good_model/issues>`_.
 
 
 Getting Started
