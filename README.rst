@@ -98,9 +98,3 @@ If you're adapting this project for your specific use:
 #. Ensure all dependencies are listed in `requirements.txt`.
 #. Run initial tests to ensure basic functionality.
 #. Optionally, extend the provided tests to cover new functionality or data scenarios.
-
-
-Further Documentation
----------------------
-
-Refer to project documentation in the `src/` folder and inline comments for detailed guidance on extending or customizing the optimization model.
