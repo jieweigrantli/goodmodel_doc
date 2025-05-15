@@ -124,4 +124,8 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   ../home/index
+   :caption: Contents:
+
+   usage
+   api
+   ../home/index     # Include Markdown page (no .md extension)
