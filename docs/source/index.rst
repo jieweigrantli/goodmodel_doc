@@ -1,221 +1,119 @@
----
-orphan: true
----
 
-<style>
-/* Cards with links */
-.sd-hide-link-text {
-  height: 0;
-}
-</style>
-
-# Grid Optimized Operation Dispatch (GOOD)
+Grid Optimized Operation Dispatch (GOOD)
+=========================================
 
 Welcome to the documentation for **GOOD** – Grid Optimized Operation Dispatch – a Python-based power grid optimization framework designed to model energy systems with renewable integration and policy constraints.
 
 Whether you're exploring grid optimization, energy policy simulation, or sustainable power systems, this guide will help you get started with GOOD and adapt it for your project needs.
 
-:::{rubric} Overview
-:::
-* Python-based framework for grid modeling and dispatch optimization.
-* Supports renewable integration and custom policy constraints.
-* Modular code structure for assets, buses, policies, and networks.
-* Includes test suite powered by `pytest`.
-* Designed to be flexible and extensible for academic and practical use cases.
+Overview
+--------
 
-::::::{grid} 1
-:margin: 1
-:padding: 2
+- Python-based framework for grid modeling and dispatch optimization.
+- Supports renewable integration and custom policy constraints.
+- Modular code structure for assets, buses, policies, and networks.
+- Includes test suite powered by ``pytest``.
+- Designed to be flexible and extensible for academic and practical use cases.
 
-:::{grid-item-card} {material-outlined}`bolt;1.7em` Core Repository
-:link: https://github.com/ucdavis/good_model/tree/1.1.1/good/
-:link-alt: GOOD Core Codebase
-:padding: 2
-:class-title: sd-fs-5
+Core Repository
+~~~~~~~~~~~~~~~
 
 Explore the GOOD model's core structure including asset definitions, network modeling, and policy implementations.
-+++
-```{button-link} https://github.com/ucdavis/good_model
-:color: primary
-:expand:
-**View on GitHub**
-```
-:::
 
-::::::{grid-item}
-:margin: 0
-:padding: 2
+**GitHub:** https://github.com/ucdavis/good_model
 
-::::{grid} 2
-:margin: 0
-:padding: 0
+Optimization Modules
+~~~~~~~~~~~~~~~~~~~~
 
-:::{grid-item-card} {material-outlined}`category;1.7em` Optimization Modules
-:link: https://github.com/ucdavis/good_model/tree/1.1.1/good/
-:link-alt: GOOD Modules Overview
-:class-title: sd-fs-5
+Includes ``assets``, ``buses``, ``edges``, ``policies``, and more.
 
-Includes `assets`, `buses`, `edges`, `policies`, and more.
-:::
-
-:::{grid-item-card} {material-outlined}`science;1.7em` Graph Utilities
-:link: https://github.com/ucdavis/good_model/blob/1.1.1/good/graph.py
-:link-alt: Graph Utilities
-:class-title: sd-fs-5
+Graph Utilities
+~~~~~~~~~~~~~~~
 
 Extend NetworkX for advanced graph manipulation and serialization.
-:::
 
-::::
-:::::
+Dependencies
+~~~~~~~~~~~~
 
-:::{grid-item-card} {material-outlined}`build_circle;1.7em` Dependencies
-:link: https://github.com/ucdavis/good_model/blob/1.1.1/good/requirements.txt
-:link-alt: Requirements File
-:padding: 2
-:class-title: sd-fs-5
+Python dependencies for running GOOD, managed via ``requirements.txt``.
 
-Python dependencies for running GOOD, managed via `requirements.txt`.
-:::
+Learn
+-----
 
-::::::
+Quickstart
+~~~~~~~~~~
 
+Getting Started with GOOD::
 
-## Learn
+    git clone <repository-url>
+    cd good-model
+    python -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
 
-:::{rubric} Quickstart
-:::
-
-::::{card} Getting Started with GOOD
-:class-title: sd-fs-4
-:class-body: sd-text-center
-:class-footer: sd-fs-6
-
-+++
-```console
-git clone <repository-url>
-cd good-model
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
-:::{div} text-smaller
 Clone the repo, set up a virtual environment, and install dependencies to begin modeling with GOOD.
-:::
-::::
 
+Running the Model
+-----------------
 
-:::{rubric} Running the Model
-:::
-::::{card} Configure and Optimize
-:class-title: sd-fs-4
-:class-body: sd-text-center
-:class-footer: sd-fs-6
+Configure and Optimize::
 
-+++
-Edit `config.py`:
+    # Edit config.py
+    REGIONS = ['ERC_FRNT', 'ERC_PHDL', 'ERC_REST', 'ERC_WEST']
+    START_HOUR = 0
+    NUM_HOURS = 24
+    INPUT_GRAPH_PATH = 'Examples/WEC.json'
 
-```python
-REGIONS = ['ERC_FRNT', 'ERC_PHDL', 'ERC_REST', 'ERC_WEST']
-START_HOUR = 0
-NUM_HOURS = 24
-INPUT_GRAPH_PATH = 'Examples/WEC.json'
-```
+    # Run the script
+    python run_network.py
 
-Run:
+After running, results are saved to ``optimization_results.json`` and logs to ``optimization_output.log``.
 
-```console
-python run_network.py
-```
+Testing
+-------
 
-:::{div} text-smaller
-After running, results are saved to `optimization_results.json` and logs to `optimization_output.log`.
-:::
-::::
+Run Tests with Pytest::
 
+    # Run all tests
+    pytest
 
-:::{rubric} Testing
-:::
+    # Run a specific test
+    pytest tests/test_feasibility.py
 
-::::{card} Run Tests with Pytest
-:class-footer: text-smaller
+Adapting for Your Use
+----------------------
 
-Run all tests:
+Customize for Your Project:
 
-```console
-pytest
-```
-
-Or a specific file:
-
-```console
-pytest tests/test_feasibility.py
-```
-::::
-
-
-:::{rubric} Adapting for Your Use
-:::
-
-::::{grid} 1 1 2 2
-:padding: 0
-
-:::{grid-item-card}
-:padding: 3
-:class-header: sd-text-center sd-fs-5 sd-font-weight-bold sd-text-capitalize
-:class-body: sd-text-center sd-fs-5
-:class-footer: text-smaller
-Customize for Your Project
-^^^
-{material-outlined}`construction;3.5em`
-+++
 1. Clone repo  
-2. Edit `config.py`  
-3. Add new data under `Data/`  
+2. Edit ``config.py``  
+3. Add new data under ``Data/``  
 4. Validate with tests  
 5. Extend as needed
-:::
-::::
 
+Resources
+---------
 
-## Resources
+README
+~~~~~~
 
-::::{grid} 2 3 3 3
-:padding: 0
+Project-level overview and links to the model structure, usage, and contribution guidelines.
 
-:::{grid-item-card} README
-:link: https://github.com/ucdavis/good_model/blob/1.1.1/README.rst
-:link-alt: Project README
-:padding: 3
-:class-card: sd-pt-3
-:class-title: sd-fs-5
-:class-body: sd-text-center
-:class-footer: text-smaller
-{material-outlined}`description;3.5em`
-+++
-Overview and links to the model structure, usage, and contribution guidelines.
-:::
+**Link:** https://github.com/ucdavis/good_model/blob/1.1.1/README.rst
 
-:::{grid-item-card} Test Suite
-:link: https://github.com/ucdavis/good_model/tree/1.1.1/tests/
-:link-alt: GOOD Test Suite
-:padding: 3
-:class-card: sd-pt-3
-:class-title: sd-fs-5
-:class-body: sd-text-center
-:class-footer: text-smaller
-{material-outlined}`bug_report;3.5em`
-+++
-Automated tests for optimization logic and edge cases using `pytest`.
-:::
+Test Suite
+~~~~~~~~~~
 
-::::
+Automated tests for optimization logic and edge cases using ``pytest``.
 
+**Link:** https://github.com/ucdavis/good_model/tree/1.1.1/tests/
 
-:::{rubric} Questions or Feedback?
-:::
-Please open an issue via [GitHub Issues](https://github.com/ucdavis/good_model/issues) if you have suggestions, bugs, or contributions.
+Questions or Feedback?
+----------------------
+
+Please open an issue via GitHub if you have suggestions, bugs, or contributions:
+
+**Issues:** https://github.com/ucdavis/good_model/issues
 
 .. note::
 
