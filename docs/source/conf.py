@@ -10,9 +10,6 @@ release = '0.1'
 version = '0.1.0'
 
 master_doc = 'index'
-extensions = [
-    'myst_parser'
-]
 # -- General configuration
 
 extensions = [
@@ -43,9 +40,5 @@ html_sidebars = {
     ]
 }
 
-source_suffix = {
-    '.rst': 'restructuredtext',
-    '.md': 'markdown',
-}
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
