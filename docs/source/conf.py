@@ -11,7 +11,7 @@ version = '0.1.0'
 
 master_doc = 'index'
 extensions = [
-    'myst-parser',
+    'myst_parser',
 ]
 # -- General configuration
 
@@ -41,6 +41,11 @@ html_sidebars = {
         'relations.html',
         'searchbox.html',
     ]
+}
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
 }
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
