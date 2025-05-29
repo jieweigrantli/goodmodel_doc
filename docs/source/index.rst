@@ -119,11 +119,10 @@ Please open an issue via GitHub if you have suggestions, bugs, or contributions:
 
    This project is under active development.
 
-Contents
---------
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
    formulation
    usage
    api
