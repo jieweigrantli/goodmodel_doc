@@ -11,7 +11,7 @@ version = '0.1.0'
 
 master_doc = 'index'
 extensions = [
-    'myst_parser',
+    'myst-parser',
 ]
 # -- General configuration
 
