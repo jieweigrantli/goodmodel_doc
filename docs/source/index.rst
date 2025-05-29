@@ -125,7 +125,7 @@ Contents
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
+   formulation
    usage
    api
    ../home/index     # Include Markdown page (no .md extension)
