@@ -121,11 +121,9 @@ Please open an issue via GitHub if you have suggestions, bugs, or contributions:
 
 Contents
 --------
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
    formulation
    usage
    api
-   ../home/index     # Include Markdown page (no .md extension)
